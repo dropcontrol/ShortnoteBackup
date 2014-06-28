@@ -1,0 +1,19 @@
+{
+    "manifest_version": 2,
+    "name": "ShortnoteBackup",
+    "version": "0.0.1",
+    "browser_action": {
+        "default_popup": "popup.html"
+    },
+    "permissions": [
+        "http://*/*",
+        "https://*/*"
+    ],
+    "content_scripts": [{
+        "matches": [
+            "https://www.shortnote.jp/*"
+        ],
+        "js":["jquery.js", "mt-data-api.min.js", "script.js"],
+        "run_at": "document_end"
+    }]
+}
